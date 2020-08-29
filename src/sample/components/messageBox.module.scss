@@ -1,0 +1,70 @@
+.modalPanel {
+	position: fixed;
+  display: flex;
+	align-items: center;
+	justify-content: center;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999999999;
+
+  .buttonArea {
+    position: relative;
+    justify-content: space-between;
+    a {
+      display: inline-block;
+      margin-right: 10px;
+    }
+  }
+  
+  .buttonAreaCenter {
+    @extend .buttonArea; 
+    margin: auto;
+    margin-top: 10px;
+  }
+  
+  .dialog {
+    background-color: white;
+    padding: 30px 50px 20px;
+    .content {
+      dl{
+        dt {
+          margin-bottom: 20px;
+          font-weight: bold;
+          font-size: 20px;
+          
+        }
+        dd ul li {
+          margin: 24px 0;
+        }
+      } 
+    }
+    .commandContainer {
+      margin-top: 30px;
+      text-align: center; 
+      ul{
+        list-style: none;
+        padding: 0px;
+        li {
+          margin: 0 10px;
+          display: inline-block;
+          vertical-align: middle;
+          button{
+            padding-top: 10px;
+            padding-bottom: 10px;
+            width: 130px;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    .command {
+      @extend .buttonAreaCenter;
+    }
+  
+      
+  }
+}
+
